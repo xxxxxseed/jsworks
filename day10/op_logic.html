@@ -29,14 +29,33 @@
         result = (num1 > num2) && (num1 == num2);
         console.log(result); //false
 
+        /*
+            T && T -> T
+            T && F -> F
+            F && T -> F
+            F && F -> F
+        */
+
         // 논리합 || - 두 항중 하나이상 참이면 참이다.
         result = (num1 > num2) || (num1 == num2);
         console.log(result); //true
+
+        /*
+            T || T -> T
+            T || F -> T
+            F || T -> T
+            F || F -> F
+        */
 
         // 논리 부정
         result = !(num1 < num2);
         console.log(result); //true
 
+        /*
+            !T -> F
+            !F -> T
+        */
+       
     </script>
 </body>
 </html>
