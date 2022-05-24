@@ -7,7 +7,7 @@
 */
 
 // 입력(변순 선언 및 값 저장)
-let score = 85;
+let score = Number(prompt("점수를 입력하세요"));
 let grade = ""; // 문자형 변수 초기화
 
 // 연산(if 조건문) 및 출력
