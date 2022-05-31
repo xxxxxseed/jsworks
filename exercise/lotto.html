@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 추첨 프로그램</title>
+    <style>
+        section{
+            width: 200px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 5px 10px;
+            background: #eee;
+        }
+        p{
+            text-align: center;
+            margin-top: 30px;
+            /* font-weight: bold; */
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>로또 추첨 번호</h1>
+    </section>
+
+    <script>
+        let member = 45;
+        let winner = new Array(6); // 로또 배열 생성
+
+        // 랜덤 번호 추첨
+        for(let i = 0; i < winner.length; i++){
+            let pickedOne = Math.floor(Math.random() * member) + 1;
+            winner[i] = pickedOne;
+            for(let j = 0; j < i; j++){
+                if(winner[i] == winner[j]){
+                    i--;
+                    console.log("중복 번호 : " + winner[j]);
+                }
+            }
+        }
+
+        document.write("<p>번호 : ");
+
+        for(let i = 0; i < winner.length; i++){
+            // document.write(winner[i] + ", ")
+            if(i == winner.length - 1){
+                document.write(winner[i] + "")
+            }else{
+                document.write(winner[i] + ", ")
+            }
+        }
+
+        document.write("</p>");
+    </script>
+</body>
+</html>
