@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시, 분, 초 계산</title>
+</head>
+<body>
+    <h3>시간(초)을 시, 분, 초로 환산</h3>
+    <p id="display"></p>
+    
+    <script>
+        let time = 5000; // 초를 설정
+        let min = 0; // 분
+        let sec = 0;
+        let hour = 0;
+        // let day = 0;
+
+        min = Math.floor(time / 60); // 분(몫)을 기준
+        sec = time % 60; // 초(나머지)
+        hour = Math.floor(min / 60);
+        min = min % 60; // 최종의 분은 이전 분을 나눈 나머지
+        
+        
+        /*day = Math.floor(hour / 24);
+        hour = hour % 24;
+        
+        console.log(day + "일");*/
+
+        // console.log(hour + "시간 " + min + "분 " + sec + "초");
+        let result = hour + "시간 " + min + "분 " + sec + "초";
+        // innerText 와 innerHTML은 같은 기능
+        document.getElementById("display").innerText = result;
+
+
+
+
+    </script>
+</body>
+</html>

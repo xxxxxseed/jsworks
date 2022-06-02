@@ -7,18 +7,15 @@
     <title>로또 추첨 프로그램</title>
     <style>
         section{
-            width: 200px;
+            width: 800px;
             margin: 0 auto;
-            border: 1px solid #ccc;
-            text-align: center;
-            padding: 5px 10px;
-            background: #eee;
         }
-        p{
-            text-align: center;
-            margin-top: 30px;
-            /* font-weight: bold; */
-            font-size: 1.2em;
+        section, p{text-align: center;}
+        h1{
+            display: inline-block;
+            padding: 10px 20px;
+            background: #eee;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
@@ -29,28 +26,31 @@
 
     <script>
         let member = 45;
-        let winner = new Array(6); // 로또 배열 생성
+        let lotto = new Array(6); // 로또 배열 생성
 
         // 랜덤 번호 추첨
-        for(let i = 0; i < winner.length; i++){
-            let pickedOne = Math.floor(Math.random() * member) + 1;
-            winner[i] = pickedOne;
+        for(let i = 0; i < lotto.length; i++){
+            let num = Math.floor(Math.random() * member) + 1; // 랜덤 번호
+            lotto[i] = num; // 로또 배열에 저장
+            
+            // 중복 제거
             for(let j = 0; j < i; j++){
-                if(winner[i] == winner[j]){
+                if(lotto[i] == lotto[j]){
                     i--;
-                    console.log("중복 번호 : " + winner[j]);
+                    console.log("중복 번호 : " + lotto[j]);
                 }
             }
         }
 
+        // 출력
         document.write("<p>번호 : ");
 
-        for(let i = 0; i < winner.length; i++){
-            // document.write(winner[i] + ", ")
-            if(i == winner.length - 1){
-                document.write(winner[i] + "")
+        for(let i = 0; i < lotto.length; i++){
+            // document.write(lotto[i] + ", ")
+            if(i == lotto.length - 1){
+                document.write(lotto[i] + "")
             }else{
-                document.write(winner[i] + ", ")
+                document.write(lotto[i] + ", ")
             }
         }
 

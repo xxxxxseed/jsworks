@@ -8,8 +8,13 @@ function watch(){
 }*/
 
 // 실행 함수
-setInterval(function(){
+let timer = setInterval(function(){
     const date = new Date();
     let now = date.toLocaleTimeString();
     document.getElementById("display").innerHTML = now;
 },1000);
+
+// 시간 중지
+function myStop(){
+    clearInterval(timer);
+}
