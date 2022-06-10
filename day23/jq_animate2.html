@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 효과</title>
+    <link rel="stylesheet" href="./css/style2.css">
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            let w = $("#gnb ul li").width(); // li의 너비
+            console.log(w);
+            $("#gnb").append("<span></span>");
+            $("#gnb ul li").on("mouseenter focusin", function(){
+                let idx = $(this).index();
+                console.log(idx);
+                // 선택 요소의 하위 a 요소에 클래스 생성
+                $(this).find("a").addClass("on");
+                // li 형제 요소의 하위 a요소의 클래스 제거
+                $(this).siblings().find("a").removeClass("on");
+                // idx * w -> 0 x 150, 1 x 150, 2 x 150, 3 x 150
+                $("#gnb span").stop(true, true).animate({left: idx * w}, "fast", "swing");
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav id="gnb">
+        <ul>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">jQuery</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
