@@ -17,7 +17,7 @@ function stopWatch(){
     // 재생 - play
     $("#startbtn").click(function(){
         if(sw){
-            $(".fa").css("color", "#f60");
+            $(".fa-solid").css("color", "#f60");
             this.style.color = "#555";
             sw = false; // 시작 버튼 누른후 정지 상태
 
@@ -56,7 +56,7 @@ function stopWatch(){
     // 일시중지 - pause
     $("#pausebtn").click(function(){
         if(time != 0){
-            $(".fa").css("color", "f60");
+            $(".fa-solid").css("color", "f60");
             this.style.color = "#555";
             clearInterval(timer); // 타이머 중지
             sw = true; // false -> true
@@ -66,7 +66,7 @@ function stopWatch(){
     // 정지 - stop
     $("#stopbtn").click(function(){
         if(time != 0){
-            $(".fa").css("color", "f60");
+            $(".fa-solid").css("color", "f60");
             this.style.color = "#555";
             clearInterval(timer);
             sw = true;
