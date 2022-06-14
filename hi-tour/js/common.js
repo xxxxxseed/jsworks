@@ -1,15 +1,24 @@
 
 
 $(document).ready( function() {
-	
+	// let isOver1 = false; // 상위메뉴(마우스오버되면: true/)
+	// let isOver2 = false; // 하위메뉴(마우스오버되면: true/)
+
+	let isOver1 = [false, false, false, false]; // 0, 1, 2, 3
+	let isOver2 = [false, false, false, false];
+
+
 	// fadeOut()의 시간 설정
 	function goHide(){
 		for(var i = 1; i <= 4; i++){
-			$(".gnb_depth2_" + i).fadeOut("fast");
+			if(!isOver1[i] && !isOver2[0]){ // 상위, 하위 메뉴가 닿았을때
+			$(".gnb_depth2_" + (i+1)).fadeOut("fast");
+			}
 		}
 	}
 	
 	// 상단 메뉴 마우스오버, 탭 클릭 코드
+	// 상위메뉴
 	$(".openAll1").mouseover(function(){
 		// 서브메뉴 나타나기(header의 너비가 800보다 클때)
 		if(parseInt($("header").css("width")) > 800)
@@ -17,12 +26,16 @@ $(document).ready( function() {
 	}).focus(function(){
 		if(parseInt($("header").css("width")) > 800)
 			$(".gnb_depth2_1").fadeIn("fast");
+			isOver1[0] = true;
 	}).mouseout(function(){
 		// $(".gnb_depth2_1").fadeOut("fast");
-		setTimeout(goHide, 500); // 0.5초
+		setTimeout(goHide, 300); // 0.5초
+			isOver1[0] = true;
 	}).blur(function(){
-		setTimeout(goHide, 500);
+		setTimeout(goHide, 300);
+			isOver1[0] = false;
 	});
+	// 하위메뉴
 	
 	$(".openAll2").mouseover(function(){
 		// 서브메뉴 나타나기(header의 너비가 800보다 클때)
@@ -33,9 +46,9 @@ $(document).ready( function() {
 			$(".gnb_depth2_2").fadeIn("fast");
 	}).mouseout(function(){
 		// $(".gnb_depth2_2").fadeOut("fast");
-		setTimeout(goHide, 500);
+		setTimeout(goHide, 300);
 	}).blur(function(){
-		setTimeout(goHide, 500);
+		setTimeout(goHide, 300);
 	});
 	
 	$(".openAll3").mouseover(function(){
@@ -47,9 +60,9 @@ $(document).ready( function() {
 			$(".gnb_depth2_3").fadeIn("fast");
 	}).mouseout(function(){
 		// $(".gnb_depth2_3").fadeOut("fast");
-		setTimeout(goHide, 500);
+		setTimeout(goHide, 300);
 	}).blur(function(){
-		setTimeout(goHide, 500);
+		setTimeout(goHide, 300);
 	});
 	
 	$(".openAll4").mouseover(function(){
@@ -61,9 +74,9 @@ $(document).ready( function() {
 			$(".gnb_depth2_4").fadeIn("fast");
 	}).mouseout(function(){
 		// $(".gnb_depth2_4").fadeOut("fast");
-		setTimeout(goHide, 500);
+		setTimeout(goHide, 300);
 	}).blur(function(){
-		setTimeout(goHide, 500);
+		setTimeout(goHide, 300);
 	});
 	
 	// top을 클릭하면 header로 이동(라이브러리)
