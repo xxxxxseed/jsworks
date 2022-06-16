@@ -183,9 +183,10 @@ $(document).ready(function(){
     
     // 프로그램 소개 - 더보기/접기 작동
 	$('.program_list li .btn_more a').click(function(){
+		// li의 하위 태그중에서 subtxt
 		if ($(this).parent().parent().find('.subtxt').css('display') == 'none') {
 			$(this).parent().parent().find('.subtxt').css('display','inline');
-			$(this).text('접기');
+			$(this).text('접기'); // 텍스트가 "접기"로 변경
 		} else {
 			$(this).parent().parent().find('.subtxt').css('display','none');
 			$(this).text('더보기');

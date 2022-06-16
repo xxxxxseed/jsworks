@@ -297,22 +297,24 @@ footer .foot_area .snslink li + li + li a{background: url(../img/ico_instargram_
 .near_list {border-top:1px solid #ccc;}
 .near_list li {padding:10px; border-bottom:1px solid #ccc;}
 .near_list li:after {content:""; display:block; clear:both;}
-.near_list li h4 { float:left; width:100px; padding:0 0 0 50px; background:url(../img/ico_nearNext.png) no-repeat 12px 50%; font-size:15px;}
-.near_list li h4.next {background:url('../img/ico_nearPrev.png') no-repeat 12px 50%;}
+.near_list li h4 { float:left; width:100px; padding:0 0 0 50px; background:url(../img/ico_nearPrev.png) no-repeat 12px 50%; font-size:15px;}
+.near_list li h4.next {background:url('../img/ico_nearNext.png') no-repeat 12px 50%;}
 .near_list li a {float:left;}
 
 /* place_area */
-.bodytext_area.place_area {padding:55px 0 0;}
-.program_list li {float:left; width:31.5%; margin:0 0.9%;}
-.program_list li:nth-child(3n+1) {clear:both;}
-.program_list li .img_place {display:block;  width:100%;}
-.program_list li h3 {padding:40px 0 0; font-weight:bold; font-size:22px;}
-.program_list li .subttl {padding:25px 0 0; font-weight:bold; font-size:16px; color:#fa6400; letter-spacing: 0;}
-.program_list li .program_content {padding:15px 0 0; line-height:1.8; font-size:15px;}
-.program_list li .program_content p {width:100%; overflow:hidden; word-break:keep-all;}
-.program_list li .program_content p .subtxt {display: none;}
-.program_list li .btn_more {padding:10px 0 20px; text-align:center; font-size:12px;}
-.program_list li .btn_more a {display:inline-block; padding:5px 7px; border-radius:3px; background:#000; color:#fff;}
+.bodytext_area.place_area{padding: 55px 0 0;}
+.program_list li{float: left; width: 31.5%; margin: 0 0.9%;}
+.program_list li:nth-child(3n+1){clear: both;}
+.program_list .img_place{display: block; width: 100%;}
+.program_list h3{padding: 40px 0 0; font-weight: bold; font-size: 22px;}
+.program_list li .subttl{padding: 25px 0 0; font-weight: bold; font-size: 16px; color: #fa6400; letter-spacing: -\0;}
+.program_list .program_content{padding: 15px 0 0; line-height: 1.8; font-size: 15px;}
+.program_list .program_content p{width: 100%; overflow: hidden; word-break: keep-all;}
+.program_list .program_content p .subtxt{display: none;}
+.program_list .btn_more{padding: 10px 0 20px; text-align: center; font-size: 12px;}
+.program_list .btn_more a{display: inline-block; padding: 5px 7px; border-radius: 3px; background: #000; color: #fff;}
+
+
 
 /* login */
 .login_wrap {width:468px; margin:50px auto 0;}
