@@ -178,7 +178,12 @@ $(document).ready( function() {
 $(document).ready(function(){
     // PC브라우저에서 좁혀서 메뉴 닫고 다시 넓힐 때 상단메뉴 노출되게.
     $(window).resize(function() {
-        if ( parseInt($('header').css('width')) > 800 ) $('.header_cont').show();
+        if ( parseInt($('header').css('width')) > 800 ){
+			$('.header_cont').show();		
+		}else{
+			$('.header_cont').hide();		
+		}
+        // if ( parseInt($('header').css('width')) < 800 ) $('.header_cont').hide();
     }); 
     
     // 프로그램 소개 - 더보기/접기 작동
