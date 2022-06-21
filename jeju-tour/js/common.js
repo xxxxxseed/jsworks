@@ -160,11 +160,23 @@ $(document).ready(function() {
 	});
 
 	//모바일 메뉴 띄움
+	let isOpen = false; //상태 변수
 	$('.openMOgnb').click(function(){
-		$('header').addClass('on');
-		$('header .header_cont').slideDown('fast');
-		$('header .header_area .header_cont .closePop').show();			
+		if(isOpen == false){ //메뉴를 클릭하면
+			$('header').addClass('on');
+			$('header .header_cont').slideDown('fast');
+			$('header .header_area .header_cont .closePop').show();
+			isOpen = true; //상태 변경
+		}else{ //isOpen == true
+			$('.header_cont').slideUp('fast');
+        	$('header').removeClass('on');
+			isOpen = false;
+		}
+		
 		// $("body").bind('touchmove', function(e){e.preventDefault()});
+		/*$('header').toggleClass('on');
+		$('header .header_cont').slideToggle('fast');
+		$('header .header_area .header_cont .closePop').toggle();*/
 	});
 	$('header .header_cont .closePop').click(function(){
         $('.header_cont').slideUp('fast');
