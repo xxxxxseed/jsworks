@@ -1,0 +1,79 @@
+*{margin: 0;padding: 0;}
+.main_wrap{width: 100%;}
+body{font-family: "나눔고딕";}
+.main_nav1{ background: #fcdf33;}
+.main_nav1 ul,
+.main_nav2 ul
+{
+    list-style: none;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 auto;
+    width: 90%;
+}
+.main_nav1 ul li a,
+.main_nav2 ul li a
+{color: rgba(0,0,0,.6);text-decoration: none;}
+.main_upper{
+    box-sizing: border-box;
+    height: 37px;
+    display: flex;
+    line-height: 26px;
+    justify-content: space-between;
+}
+.main_line{border-bottom: 1px solid rgba(0, 0, 0, 0.1);width: 100%;}
+.main_upper li{margin: 0 5px;}
+.main_lower{
+    box-sizing: border-box;
+    display: flex;
+    height: 62px;
+    line-height: 52px;
+    position: relative;
+}
+.main_lower li {margin-right: 5px;}
+.main_lower li span{font-size: 2em;}
+
+.main_lower input{
+    position: absolute;
+    text-align: center;
+    top: 13px;
+    right:0 ;
+    width: 212px;
+    height: 34px;
+    border-radius: 17px;
+    box-sizing: border-box;
+    border: 1px solid #fcdf33 ;
+}
+
+.join{
+    /* width: 1024px; */
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 55px 50px 0;
+}
+
+.join form{margin: 40px auto 0;}
+.join fieldset{border: none;}
+.join legend{font-size: 0; text-indent: -9999px; overflow: hidden; visibility: hidden;}
+.join p{position: relative;
+          padding-left: 20px;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #000;
+          font-size: 1rem;
+          color: #f00;
+}
+.join .required::before{
+    content: "*";
+    display: inline-block;
+    width: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #f00;
+}
+
+@media screen and (max-width:1023)  {
+    .join{width: 100%;}
+}
+
+
